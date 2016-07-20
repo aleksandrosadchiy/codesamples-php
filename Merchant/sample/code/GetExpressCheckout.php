@@ -20,7 +20,7 @@ class GetExpressCheckout {
 		// A timestamped token, the value of which was returned by
 		// `SetExpressCheckout` response.
 		$setEc = new SetExpressCheckout();
-		$setEcResponse = $setEc->setExpressCheckout();
+		$setEcResponse = $setEc->setEC();
 		var_dump($setEcResponse->Token);
 		$getExpressCheckoutDetailsRequest = new GetExpressCheckoutDetailsRequestType($setEcResponse->Token);
 		$getExpressCheckoutDetailsReq->GetExpressCheckoutDetailsRequest = $getExpressCheckoutDetailsRequest;
